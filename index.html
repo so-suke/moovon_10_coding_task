@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" siteSection="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" siteSection="ie=edge">
   <title>寺田有希オフィシャルサイト</title>
 </head>
 
 <body>
-  <header>
-    <h1>
+  <header class="header">
+    <h1 class="header__logo">
       <a href="http://yukiterada.com/">
         <img src="img/logo_.jpg" alt="">
       </a>
     </h1>
-    <nav>
-      <ul>
+    <nav class="header__nav">
+      <ul class="header__navList">
         <li>
           <a href="http://yukiterada.com/profile/">
             <img src="img/heder_navi_off_01.png" alt="">
@@ -50,13 +50,13 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <div>
-      <section>
-        <h2>
+  <main class="main">
+    <div class="siteSectionTable">
+      <section class="siteSection siteSectionTable__half siteSectionTable__half--left">
+        <h2 class="siteSection__title">
           <img src="img/title_event.png" alt="">
         </h2>
-        <ul>
+        <ul class="siteSectionTable__list">
           <li>
             <a href="http://yukiterada.com/">
               <time>2016-05-23</time>
@@ -82,13 +82,13 @@
             </a>
           </li>
         </ul>
-        <a href="http://yukiterada.com/event_schedule/">View ALL</a>
+        <a class="siteSection__seeAll" href="http://yukiterada.com/event_schedule/">View ALL</a>
       </section>
-      <section>
-        <h2>
+      <section class="siteSection siteSectionTable__half siteSectionTable__half--right">
+        <h2 class="siteSection__title">
           <img src="img/title_news.png" alt="">
         </h2>
-        <ul>
+        <ul class="siteSectionTable__list">
           <li>
             <a href="http://yukiterada.com/">
               <time>2016-03-11</time>
@@ -114,14 +114,14 @@
             </a>
           </li>
         </ul>
-        <a href="http://yukiterada.com/news_information/">View ALL</a>
+        <a class="siteSection__seeAll" href="http://yukiterada.com/news_information/">View ALL</a>
       </section>
     </div>
-    <section>
-      <h2>
+    <section class="siteSection">
+      <h2 class="siteSection__title">
         <img src="img/title_gallery.png" alt="">
       </h2>
-      <ul>
+      <ul class="imgGallery">
         <li>
           <a href="http://yukiterada.com/gallery/">
             <img src="img/075.jpg" alt="">
@@ -168,39 +168,39 @@
           </a>
         </li>
       </ul>
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/teradayuki421">
-            <img src="img/btn_fb1.png" alt="">
-          </a>
-          <p>facebook Page</p>
-          <p>寺田有希オフィシャルフェイスブックページ</p>
-        </li>
-        <li>
-          <a href="https://twitter.com/terada_yuki">
-            <img src="img/btn_tw1.png" alt="">
-          </a>
-          <p>twitter</p>
-          <p>@terada_yuki</p>
-        </li>
-        <li>
-          <a href="http://tomaton.thebase.in/">
-            <img src="img/btn_base1.png" alt="">
-          </a>
-          <p>BASE</p>
-          <p>寺田有希オンラインショップ</p>
-        </li>
-      </ul>
     </section>
+    <ul class="sns">
+      <li class="sns__item sns__item-fb">
+        <a class="logo" href="https://www.facebook.com/teradayuki421">
+          <img src="img/btn_fb1.png" alt="">
+        </a>
+        <p class="snsname">facebook Page</p>
+        <p class="caption">寺田有希オフィシャルフェイスブックページ</p>
+      </li>
+      <li class="sns__item sns__item-twitter">
+        <a class="logo" href="https://twitter.com/terada_yuki">
+          <img src="img/btn_tw1.png" alt="">
+        </a>
+        <p class="snsname">twitter</p>
+        <p class="caption">@terada_yuki</p>
+      </li>
+      <li class="sns__item sns__item-base">
+        <a class="logo" href="http://tomaton.thebase.in/">
+          <img src="img/btn_base1.png" alt="">
+        </a>
+        <p class="snsname">BASE</p>
+        <p class="caption">寺田有希オンラインショップ</p>
+      </li>
+    </ul>
   </main>
-  <footer>
-    <img src="img/logo2.jpg" alt="">
-    <div>
-      <p><small>YUKI TERADA OFFICIAL WEB SITE</small></p>
-      <a href="http://yukiterada.com/#header-inner">
+  <footer class="footer">
+    <img class="footer__title" src="img/logo2.jpg" alt="">
+    <div class="footer__foot">
+      <p class="copyright"><small>YUKI TERADA OFFICIAL WEB SITE</small></p>
+      <a class="pagetop" href="http://yukiterada.com/#header-inner">
         <img src="img/btn_pagetop.png" alt="">
       </a>
-      <p><small>COPYRIGHT 2013 (C) YUKI TERADA.COM ALL RIGHTS RESERVED</small></p>
+      <p class="copyright"><small>COPYRIGHT 2013 (C) YUKI TERADA.COM ALL RIGHTS RESERVED</small></p>
     </div>
   </footer>
 </body>
