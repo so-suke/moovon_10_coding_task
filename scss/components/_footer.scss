@@ -17,7 +17,8 @@
 
   &__copyright {
     display: flex;
-    padding-bottom: inherit; // 位置調整目的。position:absoluteだと親のpaddingが考慮されないため。
+		/* ↓このpadding-bottomは、位置調整目的です。position:absoluteだと親のpaddingが考慮されないため。 */
+    padding-bottom: inherit;
     position: absolute;
     bottom: 0;
     width: 100%;
