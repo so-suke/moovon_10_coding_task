@@ -1,0 +1,51 @@
+.sns {
+	@include flex-space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 90px 60px;
+  border-bottom: 1px solid $lightGray;
+  text-align: center;
+}
+
+.sns__item {
+  .logo {
+    display: block;
+    margin-bottom: 8px;
+
+    img {
+      width: 120px;
+
+      &:hover {
+        opacity: $cmnOpacity;
+      }
+    }
+  }
+
+  .snsname {
+    margin-bottom: 5px;
+    font-size: .85rem;
+  }
+
+  .caption {
+    color: $gray;
+    font-size: .7rem;
+  }
+
+  &--fb {
+    .snsname {
+      color: $colorFacebook;
+    }
+  }
+
+  &--twitter {
+    .snsname {
+      color: $colorTwitter;
+    }
+  }
+
+  &--base {
+    .snsname {
+      color: $colorBase;
+    }
+  }
+}

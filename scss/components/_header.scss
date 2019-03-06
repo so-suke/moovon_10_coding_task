@@ -1,0 +1,28 @@
+.header {
+  margin-bottom: 50px;
+  padding-top: 30px;
+
+  &__logo {
+    margin-bottom: 40px;
+    text-align: center;
+
+    img {
+      width: 270px;
+
+      &:hover {
+        opacity: $cmnOpacity;
+      }
+    }
+  }
+
+
+  &__navList {
+    display: flex;
+    width: $pageWidth;
+    margin: 0 auto;
+
+    img:hover {
+      opacity: $cmnOpacity;
+    }
+  }
+}

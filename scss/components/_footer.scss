@@ -1,0 +1,41 @@
+.footer {
+  position: relative;
+  width: $pageWidth;
+  margin: 0 auto;
+  padding: 50px 0 30px;
+  text-align: center;
+
+  &__title {
+    cursor: pointer;
+    width: 286px;
+
+    &:hover {
+      opacity: $cmnOpacity;
+    }
+  }
+
+  &__copyright {
+    @include flex-space-between;
+    margin: 180px 70px 0 0;
+
+    p {
+      color: $gray;
+      font-size: .75rem;
+    }
+  }
+}
+
+.pagetop {
+  position: absolute;
+  left: 49%;
+  bottom: -10px;
+  transform: translateX(-50%);
+
+  img {
+    width: 130px;
+
+    &:hover {
+      opacity: $cmnOpacity;
+    }
+  }
+}
