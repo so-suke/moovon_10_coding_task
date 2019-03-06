@@ -1,8 +1,9 @@
 .footer {
   position: relative;
   width: $pageWidth;
+  height: 305px;
   margin: 0 auto;
-  padding: 50px 0 30px;
+  padding: 50px 0 20px;
   text-align: center;
 
   &__title {
@@ -15,8 +16,16 @@
   }
 
   &__copyright {
-    @include flex-space-between;
-    margin: 180px 70px 0 0;
+    display: flex;
+    padding-bottom: inherit; // 位置調整目的。position:absoluteだと親のpaddingが考慮されないため。
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .copyright {
+      position: absolute;
+      right: 60px;
+    }
 
     p {
       color: $gray;
@@ -27,8 +36,8 @@
 
 .pagetop {
   position: absolute;
-  left: 49%;
-  bottom: -10px;
+  left: 50%;
+  bottom: 15px;
   transform: translateX(-50%);
 
   img {

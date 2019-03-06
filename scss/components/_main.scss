@@ -1,6 +1,8 @@
 .main {
   width: $pageWidth;
   margin: 0 auto;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $lightGray;
 }
 
 .columnContainer {
