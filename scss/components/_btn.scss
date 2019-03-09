@@ -1,0 +1,14 @@
+ .column__linkBtn {
+   display: block;
+   padding: 6px 0;
+   background-color: $lightGreen;
+   color: $white;
+   font-size: .8rem;
+   text-align: center;
+
+   &:hover {
+     transition: background-color .35s ease;
+     background-color: $lightPink;
+		 color: $white;
+   }
+ }

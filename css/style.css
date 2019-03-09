@@ -356,6 +356,27 @@ a:hover {
   text-decoration: none;
 }
 
+.main {
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.columnContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.columnContainer .column {
+  width: calc(100% / 2 - 28px);
+}
+
+.columnContainer .column:last-child {
+  margin-right: 0;
+}
+
 .header {
   margin-bottom: 50px;
   padding-top: 30px;
@@ -384,71 +405,84 @@ a:hover {
   opacity: 0.75;
 }
 
-.main {
+.footer {
+  position: relative;
   width: 1000px;
+  height: 305px;
   margin: 0 auto;
-  padding-bottom: 60px;
-  border-bottom: 1px solid #dbdbdb;
-}
-
-.columnContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 90px;
-}
-
-.columnContainer .column {
-  width: calc(100% / 2 - 28px);
-}
-
-.columnContainer .column:last-child {
-  margin-right: 0;
-}
-
-.columnContainer .column__linkBtn {
-  display: block;
-  padding: 6px 0;
-  background-color: #6BCDA1;
-  color: #fff;
-  font-size: .8rem;
+  padding: 50px 0 20px;
   text-align: center;
 }
 
-.columnContainer .column__linkBtn:hover {
-  transition: background-color .35s ease;
-  background-color: #FF8B9E;
+.footer__title {
+  cursor: pointer;
+  width: 286px;
 }
 
-.columnContainer .column__list {
+.footer__title:hover {
+  opacity: 0.75;
+}
+
+.footer__copyright {
+  display: flex;
+  /* ↓このpadding-bottomは、位置調整目的です。position:absoluteだと親のpaddingが考慮されないため。 */
+  padding-bottom: inherit;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__copyright .copyright {
+  position: absolute;
+  right: 60px;
+}
+
+.footer__copyright p {
+  color: #999;
+  font-size: .75rem;
+}
+
+.pagetop {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+}
+
+.pagetop img {
+  width: 130px;
+}
+
+.pagetop img:hover {
+  opacity: 0.75;
+}
+
+.column__list {
   margin-bottom: 13px;
 }
 
-.columnContainer .column__list li {
+.column__list li {
   padding-bottom: 10px;
   border-bottom: 1px dotted #999;
 }
 
-.columnContainer .column__list li:not(:first-child) {
+.column__list li:not(:first-child) {
   margin-top: 20px;
 }
 
-.columnContainer .column__list li a:first-child {
+.column__list li a:first-child {
   display: block;
   margin-bottom: 5px;
 }
 
-.columnContainer .column__list li a time {
+.column__list li a time {
   color: #FF8B9E;
   font-size: .9rem;
 }
 
-.columnContainer .column__list li a p {
+.column__list li a p {
   color: #999;
   font-size: .85rem;
-}
-
-.column__title {
-  margin-bottom: 10px;
 }
 
 .gallery {
@@ -517,54 +551,21 @@ a:hover {
   color: #EE93A0;
 }
 
-.footer {
-  position: relative;
-  width: 1000px;
-  height: 305px;
-  margin: 0 auto;
-  padding: 50px 0 20px;
+.column__linkBtn {
+  display: block;
+  padding: 6px 0;
+  background-color: #6BCDA1;
+  color: #fff;
+  font-size: .8rem;
   text-align: center;
 }
 
-.footer__title {
-  cursor: pointer;
-  width: 286px;
+.column__linkBtn:hover {
+  transition: background-color .35s ease;
+  background-color: #FF8B9E;
+  color: #fff;
 }
 
-.footer__title:hover {
-  opacity: 0.75;
-}
-
-.footer__copyright {
-  display: flex;
-  /* ↓このpadding-bottomは、位置調整目的です。position:absoluteだと親のpaddingが考慮されないため。 */
-  padding-bottom: inherit;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer__copyright .copyright {
-  position: absolute;
-  right: 60px;
-}
-
-.footer__copyright p {
-  color: #999;
-  font-size: .75rem;
-}
-
-.pagetop {
-  position: absolute;
-  left: 50%;
-  bottom: 15px;
-  transform: translateX(-50%);
-}
-
-.pagetop img {
-  width: 130px;
-}
-
-.pagetop img:hover {
-  opacity: 0.75;
+.column__title {
+  margin-bottom: 10px;
 }

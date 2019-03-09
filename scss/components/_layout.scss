@@ -1,0 +1,23 @@
+// main
+// ------------------------------------
+.main {
+  width: $pageWidth;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $lightGray;
+}
+
+// column
+// ------------------------------------
+.columnContainer {
+  @include flex-space-between;
+  margin-bottom: 90px;
+
+  .column {
+    width: calc(100% / 2 - 28px); // width: calc(100% / 2 - 余白分);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
