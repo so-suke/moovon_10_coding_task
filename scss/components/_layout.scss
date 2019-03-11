@@ -15,9 +15,5 @@
 
   .column {
     width: calc(100% / 2 - 28px); // width: calc(100% / 2 - 余白分);
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }

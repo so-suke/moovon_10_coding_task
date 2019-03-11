@@ -373,10 +373,6 @@ a:hover {
   width: calc(100% / 2 - 28px);
 }
 
-.columnContainer .column:last-child {
-  margin-right: 0;
-}
-
 .header {
   margin-bottom: 50px;
   padding-top: 30px;
@@ -457,30 +453,30 @@ a:hover {
   opacity: 0.75;
 }
 
-.column__list {
+ul.column__list {
   margin-bottom: 13px;
 }
 
-.column__list li {
+ul.column__list li {
   padding-bottom: 10px;
   border-bottom: 1px dotted #999;
 }
 
-.column__list li:not(:first-child) {
+ul.column__list li:not(:first-child) {
   margin-top: 20px;
 }
 
-.column__list li a:first-child {
+ul.column__list li a:first-child {
   display: block;
   margin-bottom: 5px;
 }
 
-.column__list li a time {
+ul.column__list li a time {
   color: #FF8B9E;
   font-size: .9rem;
 }
 
-.column__list li a p {
+ul.column__list li a p {
   color: #999;
   font-size: .85rem;
 }

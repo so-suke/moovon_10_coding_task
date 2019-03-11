@@ -1,35 +1,36 @@
 // column
 // ------------------------------------
-.column__list {
-  margin-bottom: 13px;
+ul {
+  &.column__list {
+    margin-bottom: 13px;
 
-  li {
-    padding-bottom: 10px;
-    border-bottom: 1px dotted $gray;
+    li {
+      padding-bottom: 10px;
+      border-bottom: 1px dotted $gray;
 
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
-
-    a {
-      &:first-child {
-        display: block;
-        margin-bottom: 5px;
+      &:not(:first-child) {
+        margin-top: 20px;
       }
 
-      time {
-        color: $lightPink;
-        font-size: .9rem;
-      }
+      a {
+        &:first-child {
+          display: block;
+          margin-bottom: 5px;
+        }
 
-      p {
-        color: $gray;
-        font-size: .85rem;
+        time {
+          color: $lightPink;
+          font-size: .9rem;
+        }
+
+        p {
+          color: $gray;
+          font-size: .85rem;
+        }
       }
     }
   }
 }
-
 
 // gallery
 // ------------------------------------
