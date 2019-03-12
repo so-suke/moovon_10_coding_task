@@ -1,12 +1,89 @@
+// tabletSpNavList(タブレットとスマートフォンサイズ時に表示するナビリスト)
+// ------------------------------------
+ul {
+  &.tabletSpNavList {
+    display: none;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include breakMaxWidth($breakpointLarge) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 3);
+        height: 60px;
+        border-top: 1px solid $paletteSilver;
+        border-left: 1px solid $paletteSilver;
+        font-size: .85rem;
+        color: $paletteDustyGray;
+
+        &:nth-child(3n) {
+					// liの3の倍数のものに下線を適用する。
+          border-right: 1px solid $paletteSilver;
+        }
+
+        &:nth-child(n+4) {
+          // liの4つ目から下線を適用する。
+          border-bottom: 1px solid $paletteSilver;
+        }
+      }
+    }
+
+    @include breakMaxWidth($breakpointMedium) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 2);
+        height: 60px;
+        border-top: 1px solid $paletteSilver;
+        border-left: 1px solid $paletteSilver;
+        font-size: .85rem;
+        color: $paletteDustyGray;
+
+        // tabletサイズでの枠線打ち消し。
+        &:nth-child(3n) {
+          border-right: 0;
+        }
+
+        &:nth-child(n+4) {
+          border-bottom: 0;
+        }
+
+        // spサイズでの枠線、新たに書き出し。
+        &:nth-child(2n) {
+						// liの2の倍数のものに下線を適用する。
+          border-right: 1px solid $paletteSilver;
+        }
+
+        &:nth-child(n+5) {
+          // liの5つ目から下線を適用する。
+          border-bottom: 1px solid $paletteSilver;
+        }
+      }
+    }
+  }
+}
+
 // column
 // ------------------------------------
+
 ul {
   &.column__list {
     margin-bottom: 13px;
 
     li {
       padding-bottom: 10px;
-      border-bottom: 1px dotted $gray;
+      border-bottom: 1px dotted $paletteDustyGray;
 
       &:not(:first-child) {
         margin-top: 20px;
@@ -19,13 +96,45 @@ ul {
         }
 
         time {
-          color: $lightPink;
+          color: $palettePinkSalmon;
           font-size: .9rem;
         }
 
         p {
-          color: $gray;
+          color: $paletteDustyGray;
           font-size: .85rem;
+        }
+      }
+    }
+  }
+}
+
+ul {
+  &.column__basicList {
+    margin-bottom: 13px;
+
+    li {
+      padding-bottom: 26px;
+      border-bottom: 1px dotted $paletteDustyGray;
+      font-size: .75rem;
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      a {
+        &:first-child {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        time {
+          color: $paletteDoveGray;
+        }
+
+        p {
+          color: $paletteDoveGray;
+          font-weight: bold;
         }
       }
     }
@@ -41,6 +150,10 @@ ul {
   height: 119px;
   margin-bottom: 50px;
   padding: 0 10px 5px;
+
+  @include breakMaxWidth($breakpointLarge) {
+    margin-bottom: 20px;
+  }
 
   li {
     &:not(:last-child) {
@@ -67,13 +180,28 @@ ul {
   padding: 60px 90px 0;
   text-align: center;
 
+  @include breakMaxWidth($breakpointLarge) {
+    padding: 50px 20px 0;
+  }
+  @include breakMaxWidth($breakpointMedium) {
+    padding: 30px 10px 0;
+  }
+
   &__item {
+    width: 120px;
+
+    @include breakMaxWidth($breakpointMedium) {
+      width: calc(100% / 3 - 3%);
+    }
+
     .logo {
       display: block;
       margin-bottom: 8px;
 
+
       img {
-        width: 120px;
+        width: 100%;
+
 
         &:hover {
           opacity: $cmnOpacity;
@@ -84,11 +212,19 @@ ul {
     .snsname {
       margin-bottom: 5px;
       font-size: .85rem;
+
+      @include breakMaxWidth($breakpointMedium) {
+        display: none;
+      }
     }
 
     .caption {
-      color: $gray;
+      color: $paletteDustyGray;
       font-size: .7rem;
+
+      @include breakMaxWidth($breakpointMedium) {
+        display: none;
+      }
     }
 
     &--fb {

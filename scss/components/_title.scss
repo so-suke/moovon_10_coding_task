@@ -1,5 +1,21 @@
+.columnContainer {
+  .column {
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .column {
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
+	.subtitle {
+		margin-bottom: 6px;
+	}
+}
+
+.columnDiscription {
+	font-size: .7rem;
+	color: $paletteSilverChalice;
 }

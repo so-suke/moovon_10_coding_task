@@ -1,10 +1,15 @@
 .footer {
   position: relative;
   width: $pageWidth;
+  max-width: 100%;
   height: 305px;
   margin: 0 auto;
   padding: 50px 0 20px;
   text-align: center;
+
+  @include breakMaxWidth($breakpointLarge) {
+    height: 374px;
+  }
 
   &__title {
     cursor: pointer;
@@ -22,15 +27,29 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    color: $paletteDustyGray;
+    font-size: .8rem;
 
     .copyright {
       position: absolute;
-      right: 60px;
+
+      @include breakMinWidth($breakpointLarge + 1) {
+        right: 60px;
+      }
+
+      @include breakMaxWidth($breakpointLarge) {
+        left: 50%;
+        bottom: 23px;
+        transform: translateX(-50%);
+				width: 90%;
+        font-size: .85rem;
+      }
     }
 
-    p {
-      color: $gray;
-      font-size: .75rem;
+    @include breakMaxWidth($breakpointLarge) {
+      .pagename {
+        display: none;
+      }
     }
   }
 }
@@ -40,6 +59,10 @@
   left: 50%;
   bottom: 15px;
   transform: translateX(-50%);
+
+  @include breakMaxWidth($breakpointLarge) {
+    bottom: 75px;
+  }
 
   img {
     width: 130px;

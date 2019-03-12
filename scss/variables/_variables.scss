@@ -1,13 +1,26 @@
 $pageWidth: 1000px; // ページ全体の幅
 $cmnOpacity: .75; // 共通のopacity値
 
+// レスポンシブサイズ
+/*====================
+{{ PCを基本設計にする }}
+ - 980px〜：PC
+ - 〜979px：タブレット用
+ - 〜767px：タブレット／スマートフォン用
+====================*/
+$breakpointLarge: 979px;
+$breakpointMedium: 767px;
+
 // color
 // ------------------------------------
-$white: #fff;
-$lightGray: #dbdbdb;
-$gray: #999;
-$lightPink: #FF8B9E;
-$lightGreen: #6BCDA1;
+$paletteWhite: #fff;
+$paletteAlto: #dbdbdb;
+$paletteSilver: #ccc;
+$paletteDustyGray: #999;
+$paletteDoveGray: #666;
+$paletteSilverChalice: #A5A5A5;
+$palettePinkSalmon: #FF8B9E;
+$paletteDowny: #6BCDA1;
 $colorFacebook: #3B5998;
 $colorTwitter: #00ACEE;
 $colorBase: #EE93A0;

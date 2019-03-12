@@ -15,10 +15,17 @@
     }
   }
 
+  &__nav {
+    @include breakMaxWidth($breakpointLarge) {
+      display: none;
+    }
+  }
+
 
   &__navList {
     display: flex;
     width: $pageWidth;
+    max-width: 100%;
     margin: 0 auto;
 
     img:hover {
