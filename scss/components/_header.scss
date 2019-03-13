@@ -15,21 +15,90 @@
     }
   }
 
-  &__nav {
-    @include breakMaxWidth($breakpointLarge) {
-      display: none;
-    }
-  }
-
-
   &__navList {
     display: flex;
     width: $pageWidth;
     max-width: 100%;
     margin: 0 auto;
 
+    @include breakMaxWidth($breakpointLarge) {
+      display: none;
+    }
+
     img:hover {
       opacity: $cmnOpacity;
+    }
+
+    &--tabletsp {
+      display: none;
+      margin-bottom: 30px;
+      text-align: center;
+
+      @include breakMaxWidth($breakpointLarge) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: calc(100% / 3);
+          height: 60px;
+          border-top: 1px solid $paletteSilver;
+          border-left: 1px solid $paletteSilver;
+          font-size: .85rem;
+          color: $paletteDustyGray;
+
+          &:nth-child(3n) {
+            // liの3の倍数のものに下線を適用する。
+            border-right: 1px solid $paletteSilver;
+          }
+
+          &:nth-child(n+4) {
+            // liの4つ目から下線を適用する。
+            border-bottom: 1px solid $paletteSilver;
+          }
+        }
+      }
+
+      @include breakMaxWidth($breakpointMedium) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: calc(100% / 2);
+          height: 60px;
+          border-top: 1px solid $paletteSilver;
+          border-left: 1px solid $paletteSilver;
+          font-size: .85rem;
+          color: $paletteDustyGray;
+
+          // 上記、breakpointLargeでの枠線打ち消し。
+          &:nth-child(3n) {
+            border-right: 0;
+          }
+
+          &:nth-child(n+4) {
+            border-bottom: 0;
+          }
+
+          // breakpointMediumでの枠線、新たに書き出し。
+          &:nth-child(2n) {
+            // liの2の倍数のものに下線を適用する。
+            border-right: 1px solid $paletteSilver;
+          }
+
+          &:nth-child(n+5) {
+            // liの5つ目から下線を適用する。
+            border-bottom: 1px solid $paletteSilver;
+          }
+        }
+      }
     }
   }
 }

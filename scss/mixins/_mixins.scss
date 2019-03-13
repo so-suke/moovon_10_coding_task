@@ -3,7 +3,7 @@
   justify-content: space-between;
 }
 
-// レスポンシブ。
+// レスポンシブ関連。
 // ------------------------------------
 @mixin breakMinWidth($breakPoint) {
   @media (min-width: ($breakPoint)) {
