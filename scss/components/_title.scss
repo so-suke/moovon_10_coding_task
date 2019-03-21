@@ -10,12 +10,19 @@
   &__title {
     margin-bottom: 5px;
   }
-	.subtitle {
-		margin-bottom: 6px;
-	}
+
+  .subtitle {
+    margin-bottom: 6px;
+  }
+
+  &--tabletsp {
+    .column__title {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .columnDiscription {
-	font-size: .7rem;
-	color: $paletteSilverChalice;
+  font-size: .7rem;
+  color: $colorSilverChalice;
 }

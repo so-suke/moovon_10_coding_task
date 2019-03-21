@@ -5,11 +5,7 @@
 
 // レスポンシブ関連。
 // ------------------------------------
-@mixin breakMinWidth($breakPoint) {
-  @media (min-width: ($breakPoint)) {
-    @content;
-  }
-}
+
 @mixin breakMaxWidth($breakPoint) {
   @media (max-width: ($breakPoint)) {
     @content;

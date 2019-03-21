@@ -1,3 +1,79 @@
+// header
+.header__navList {
+  display: flex;
+  width: $pageWidth;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include breakMaxWidth($breakpointLarge) {
+    display: none;
+  }
+
+  img:hover {
+    opacity: $cmnOpacity;
+  }
+
+  &--tabletsp {
+    display: none;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include breakMaxWidth($breakpointLarge) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+        width: calc(100% / 3);
+        padding: 23px 0;
+        border-top: 1px solid $colorSilver;
+        border-left: 1px solid $colorSilver;
+        font-size: .85rem;
+        color: $colorDustyGray;
+
+        &:nth-child(3n) {
+          // liの3の倍数のものに下線を適用する。
+          border-right: 1px solid $colorSilver;
+        }
+
+        &:nth-child(n+4) {
+          // liの4つ目から下線を適用する。
+          border-bottom: 1px solid $colorSilver;
+        }
+      }
+    }
+
+    @include breakMaxWidth($breakpointMedium) {
+
+      li {
+        width: calc(100% / 2);
+        padding: 20px 0;
+
+        // 上記、breakpointLargeでの枠線打ち消し。
+        &:nth-child(3n) {
+          border-right: 0;
+        }
+
+        &:nth-child(n+4) {
+          border-bottom: 0;
+        }
+
+        // breakpointMediumでの枠線、新たに書き出し。
+        &:nth-child(2n) {
+          // liの2の倍数のものに下線を適用する。
+          border-right: 1px solid $colorSilver;
+        }
+
+        &:nth-child(n+5) {
+          // liの5つ目から下線を適用する。
+          border-bottom: 1px solid $colorSilver;
+        }
+      }
+    }
+  }
+}
+
+
 // column
 // ------------------------------------
 
@@ -7,7 +83,7 @@ ul {
 
     li {
       padding-bottom: 10px;
-      border-bottom: 1px dotted $paletteDustyGray;
+      border-bottom: 1px dotted $colorDustyGray;
 
       &:not(:first-child) {
         margin-top: 20px;
@@ -20,45 +96,42 @@ ul {
         }
 
         time {
-          color: $palettePinkSalmon;
+          color: $colorPinkSalmon;
           font-size: .9rem;
         }
 
         p {
-          color: $paletteDustyGray;
+          color: $colorDustyGray;
           font-size: .85rem;
         }
       }
     }
-  }
-}
 
-ul {
-  &.column__basicList {
-    margin-bottom: 13px;
+    &--basic {
+      li {
+        padding-bottom: 26px;
 
-    li {
-      padding-bottom: 26px;
-      border-bottom: 1px dotted $paletteDustyGray;
-      font-size: .75rem;
-
-      &:not(:first-child) {
-        margin-top: 20px;
-      }
-
-      a {
-        &:first-child {
-          display: block;
-          margin-bottom: 5px;
+        &:not(:first-child) {
+          margin-top: 20px;
         }
 
-        time {
-          color: $paletteDoveGray;
-        }
+        a {
 
-        p {
-          color: $paletteDoveGray;
-          font-weight: bold;
+          &:first-child {
+            display: block;
+            margin-bottom: 0;
+          }
+
+          time {
+            font-size: .75rem;
+            color: $colorDoveGray;
+          }
+
+          p {
+            font-size: .75rem;
+            font-weight: bold;
+            color: $colorDoveGray;
+          }
         }
       }
     }
@@ -107,6 +180,7 @@ ul {
   @include breakMaxWidth($breakpointLarge) {
     padding: 50px 20px 0;
   }
+
   @include breakMaxWidth($breakpointMedium) {
     padding: 30px 10px 0;
   }
@@ -143,7 +217,7 @@ ul {
     }
 
     .caption {
-      color: $paletteDustyGray;
+      color: $colorDustyGray;
       font-size: .7rem;
 
       @include breakMaxWidth($breakpointMedium) {

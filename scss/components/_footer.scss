@@ -27,21 +27,19 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: $paletteDustyGray;
+    color: $colorDustyGray;
     font-size: .8rem;
 
     .copyright {
       position: absolute;
-
-      @include breakMinWidth($breakpointLarge + 1) {
-        right: 60px;
-      }
+      right: 60px;
 
       @include breakMaxWidth($breakpointLarge) {
         left: 50%;
+        right: 0;
         bottom: 23px;
         transform: translateX(-50%);
-				width: 90%;
+        width: 90%;
         font-size: .85rem;
       }
     }

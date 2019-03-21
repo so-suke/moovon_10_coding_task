@@ -5,12 +5,12 @@
   max-width: calc(100% - 100px);
 
   @include breakMaxWidth($breakpointMedium) {
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 70px);
   }
 
   margin: 0 auto;
   padding-bottom: 60px;
-  border-bottom: 1px solid $paletteAlto;
+  border-bottom: 1px solid $colorAlto;
 }
 
 // column
@@ -25,7 +25,7 @@
 
   @include breakMaxWidth($breakpointMedium) {
     display: block;
-		margin-bottom: 45px;
+    margin-bottom: 45px;
   }
 
   .column {
@@ -33,7 +33,18 @@
 
     @include breakMaxWidth($breakpointMedium) {
       width: 100%;
-			margin-bottom: 50px;
+      margin-bottom: 50px;
+    }
+
+  }
+}
+
+.column {
+  &--tabletsp {
+    display: none;
+
+    @include breakMaxWidth($breakpointLarge) {
+      display: block;
     }
   }
 }
