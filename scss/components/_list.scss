@@ -26,19 +26,19 @@
       li {
         width: calc(100% / 3);
         padding: 23px 0;
-        border-top: 1px solid $colorHeaderNavTabSpBorder;
-        border-left: 1px solid $colorHeaderNavTabSpBorder;
+        border-top: 1px solid $colorHeaderNavBorder;
+        border-left: 1px solid $colorHeaderNavBorder;
         font-size: .85rem;
         color: $colorLittleLightGray;
 
         &:nth-child(3n) {
           // liの3の倍数のものに下線を適用する。
-          border-right: 1px solid $colorHeaderNavTabSpBorder;
+          border-right: 1px solid $colorHeaderNavBorder;
         }
 
         &:nth-child(n+4) {
           // liの4つ目から下線を適用する。
-          border-bottom: 1px solid $colorHeaderNavTabSpBorder;
+          border-bottom: 1px solid $colorHeaderNavBorder;
         }
       }
     }
@@ -61,12 +61,12 @@
         // breakpointMediumでの枠線、新たに書き出し。
         &:nth-child(2n) {
           // liの2の倍数のものに下線を適用する。
-          border-right: 1px solid $colorHeaderNavTabSpBorder;
+          border-right: 1px solid $colorHeaderNavBorder;
         }
 
         &:nth-child(n+5) {
           // liの5つ目から下線を適用する。
-          border-bottom: 1px solid $colorHeaderNavTabSpBorder;
+          border-bottom: 1px solid $colorHeaderNavBorder;
         }
       }
     }
