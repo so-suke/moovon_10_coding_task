@@ -477,10 +477,9 @@ a:hover {
 
 @media (max-width: 979px) {
   .footer__copyright .copyright {
-    left: 50%;
-    right: 0;
+    right: 50%;
     bottom: 23px;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     width: 90%;
     font-size: .85rem;
   }
