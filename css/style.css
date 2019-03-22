@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*!
  * Bootstrap Reboot v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -541,6 +542,7 @@ a:hover {
     flex-wrap: wrap;
     width: 100%;
   }
+
   .header__navList--tabletsp li {
     width: calc(100% / 3);
     padding: 23px 0;
@@ -549,9 +551,11 @@ a:hover {
     font-size: .85rem;
     color: #999;
   }
+
   .header__navList--tabletsp li:nth-child(3n) {
     border-right: 1px solid #ccc;
   }
+
   .header__navList--tabletsp li:nth-child(n+4) {
     border-bottom: 1px solid #ccc;
   }
@@ -562,15 +566,19 @@ a:hover {
     width: calc(100% / 2);
     padding: 20px 0;
   }
+
   .header__navList--tabletsp li:nth-child(3n) {
     border-right: 0;
   }
+
   .header__navList--tabletsp li:nth-child(n+4) {
     border-bottom: 0;
   }
+
   .header__navList--tabletsp li:nth-child(2n) {
     border-right: 1px solid #ccc;
   }
+
   .header__navList--tabletsp li:nth-child(n+5) {
     border-bottom: 1px solid #ccc;
   }
@@ -604,25 +612,25 @@ ul.column__list li a p {
   font-size: .85rem;
 }
 
-ul.column__list--basic li {
+ul.column__list--detail li {
   padding-bottom: 26px;
 }
 
-ul.column__list--basic li:not(:first-child) {
+ul.column__list--detail li:not(:first-child) {
   margin-top: 20px;
 }
 
-ul.column__list--basic li a:first-child {
+ul.column__list--detail li a:first-child {
   display: block;
   margin-bottom: 0;
 }
 
-ul.column__list--basic li a time {
+ul.column__list--detail li a time {
   font-size: .75rem;
   color: #666;
 }
 
-ul.column__list--basic li a p {
+ul.column__list--detail li a p {
   font-size: .75rem;
   font-weight: bold;
   color: #666;
