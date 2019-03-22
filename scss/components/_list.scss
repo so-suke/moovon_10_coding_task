@@ -26,19 +26,19 @@
       li {
         width: calc(100% / 3);
         padding: 23px 0;
-        border-top: 1px solid $colorSilver;
-        border-left: 1px solid $colorSilver;
+        border-top: 1px solid $colorHeaderNavTabSpBorder;
+        border-left: 1px solid $colorHeaderNavTabSpBorder;
         font-size: .85rem;
-        color: $colorDustyGray;
+        color: $colorLittleLightGray;
 
         &:nth-child(3n) {
           // liの3の倍数のものに下線を適用する。
-          border-right: 1px solid $colorSilver;
+          border-right: 1px solid $colorHeaderNavTabSpBorder;
         }
 
         &:nth-child(n+4) {
           // liの4つ目から下線を適用する。
-          border-bottom: 1px solid $colorSilver;
+          border-bottom: 1px solid $colorHeaderNavTabSpBorder;
         }
       }
     }
@@ -61,12 +61,12 @@
         // breakpointMediumでの枠線、新たに書き出し。
         &:nth-child(2n) {
           // liの2の倍数のものに下線を適用する。
-          border-right: 1px solid $colorSilver;
+          border-right: 1px solid $colorHeaderNavTabSpBorder;
         }
 
         &:nth-child(n+5) {
           // liの5つ目から下線を適用する。
-          border-bottom: 1px solid $colorSilver;
+          border-bottom: 1px solid $colorHeaderNavTabSpBorder;
         }
       }
     }
@@ -83,7 +83,7 @@ ul {
 
     li {
       padding-bottom: 10px;
-      border-bottom: 1px dotted $colorDustyGray;
+      border-bottom: 1px dotted $colorLittleLightGray;
 
       &:not(:first-child) {
         margin-top: 20px;
@@ -96,12 +96,12 @@ ul {
         }
 
         time {
-          color: $colorPinkSalmon;
+          color: $colorLightPink;
           font-size: .9rem;
         }
 
         p {
-          color: $colorDustyGray;
+          color: $colorLittleLightGray;
           font-size: .85rem;
         }
       }
@@ -124,13 +124,13 @@ ul {
 
           time {
             font-size: .75rem;
-            color: $colorDoveGray;
+            color: $colorLittleDarkGray;
           }
 
           p {
             font-size: .75rem;
             font-weight: bold;
-            color: $colorDoveGray;
+            color: $colorLittleDarkGray;
           }
         }
       }
@@ -217,7 +217,7 @@ ul {
     }
 
     .caption {
-      color: $colorDustyGray;
+      color: $colorLittleLightGray;
       font-size: .7rem;
 
       @include breakMaxWidth($breakpointMedium) {
