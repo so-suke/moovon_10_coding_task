@@ -35,7 +35,6 @@
       width: 100%;
       margin-bottom: 50px;
     }
-
   }
 }
 
@@ -46,5 +45,38 @@
     @include breakMaxWidth($breakpointLarge) {
       display: block;
     }
+  }
+}
+
+// topSliderContainer
+// ------------------------------------
+
+.topSliderContainer {
+  position: relative;
+
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    width: 60px;
+    height: 34px;
+    top: 40%;
+    &::before {
+      content: "";
+    }
+  }
+  .slick-prev {
+    left: 10%;
+    @include breakMaxWidth($breakpointLarge) {
+      left: 3%;
+    }
+  }
+  .slick-next {
+    right: 10%;
+    @include breakMaxWidth($breakpointLarge) {
+      right: 3%;
+    }
+  }
+  .slick-arrow {
+    z-index: 10;
   }
 }

@@ -3,7 +3,7 @@
   display: flex;
   width: $pageWidth;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 65px;
 
   @include breakMaxWidth($breakpointLarge) {
     display: none;
@@ -28,7 +28,7 @@
         padding: 23px 0;
         border-top: 1px solid $colorHeaderNavBorder;
         border-left: 1px solid $colorHeaderNavBorder;
-        font-size: .85rem;
+        font-size: 0.85rem;
         color: $colorLittleLightGray;
 
         &:nth-child(3n) {
@@ -36,7 +36,7 @@
           border-right: 1px solid $colorHeaderNavBorder;
         }
 
-        &:nth-child(n+4) {
+        &:nth-child(n + 4) {
           // liの4つ目から下線を適用する。
           border-bottom: 1px solid $colorHeaderNavBorder;
         }
@@ -44,7 +44,6 @@
     }
 
     @include breakMaxWidth($breakpointMedium) {
-
       li {
         width: calc(100% / 2);
         padding: 20px 0;
@@ -54,7 +53,7 @@
           border-right: 0;
         }
 
-        &:nth-child(n+4) {
+        &:nth-child(n + 4) {
           border-bottom: 0;
         }
 
@@ -64,7 +63,7 @@
           border-right: 1px solid $colorHeaderNavBorder;
         }
 
-        &:nth-child(n+5) {
+        &:nth-child(n + 5) {
           // liの5つ目から下線を適用する。
           border-bottom: 1px solid $colorHeaderNavBorder;
         }
@@ -72,7 +71,6 @@
     }
   }
 }
-
 
 // column
 // ------------------------------------
@@ -97,12 +95,12 @@ ul {
 
         time {
           color: $colorLightPink;
-          font-size: .9rem;
+          font-size: 0.9rem;
         }
 
         p {
           color: $colorLittleLightGray;
-          font-size: .85rem;
+          font-size: 0.85rem;
         }
       }
     }
@@ -116,19 +114,18 @@ ul {
         }
 
         a {
-
           &:first-child {
             display: block;
             margin-bottom: 0;
           }
 
           time {
-            font-size: .75rem;
+            font-size: 0.75rem;
             color: $colorLittleDarkGray;
           }
 
           p {
-            font-size: .75rem;
+            font-size: 0.75rem;
             font-weight: bold;
             color: $colorLittleDarkGray;
           }
@@ -196,10 +193,8 @@ ul {
       display: block;
       margin-bottom: 8px;
 
-
       img {
         width: 100%;
-
 
         &:hover {
           opacity: $cmnOpacity;
@@ -209,7 +204,7 @@ ul {
 
     .snsname {
       margin-bottom: 5px;
-      font-size: .85rem;
+      font-size: 0.85rem;
 
       @include breakMaxWidth($breakpointMedium) {
         display: none;
@@ -218,7 +213,7 @@ ul {
 
     .caption {
       color: $colorLittleLightGray;
-      font-size: .7rem;
+      font-size: 0.7rem;
 
       @include breakMaxWidth($breakpointMedium) {
         display: none;
