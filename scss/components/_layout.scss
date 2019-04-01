@@ -59,6 +59,7 @@
     z-index: 2;
     width: 60px;
     height: 34px;
+    // 縦中央より若干上目にしてあります。
     top: 40%;
     &::before {
       content: "";
@@ -78,5 +79,14 @@
   }
   .slick-arrow {
     z-index: 10;
+  }
+}
+
+.galleryContainer {
+  .slick-slide {
+    padding-right: 25px;
+    @include breakMaxWidth($breakpointLarge) {
+      padding-right: 0px;
+    }
   }
 }
