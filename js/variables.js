@@ -1,7 +1,4 @@
-// slickで使用するDOMの定義
-const $topSliderList = $('#topSliderList');
-const $gallery = $('#gallery');
-const $arrows = $('#arrows');
+const BREAKPOINT_MEDIUM = 767;
 
 const autoplaySpeed = {
   topSliderList: 5000,
@@ -9,5 +6,9 @@ const autoplaySpeed = {
 }
 
 let afterChangeFunc; // slickのスライド動作後の関数
-let windowWidth = $(window).width();
-const breakpointMedium = 767;
+
+export {
+  BREAKPOINT_MEDIUM,
+  autoplaySpeed,
+  afterChangeFunc,
+};
