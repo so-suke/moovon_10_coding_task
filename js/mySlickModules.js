@@ -1,41 +1,49 @@
-import * as doms from './doms';
-import * as variables from './variables';
+import { $gallery } from './doms';
+import { MEDIA_QUERIES } from './constants';
+import { autoplaySpeed } from './slickSettingVaribles';
+import { mediaQueries } from './resetMediaQueries';
 
 /**
- * slickを時間差でスライドさせる。
+ * slickのスライド動作後の関数
+ * @type {Object}
+ */
+export let afterChangeFunc;
+
+/**
+ * ギャラリー部のスライドを時間差でスライドさせる。
  * @param {gotoNumber} num - 何枚目のスライドにスライドさせるか。
  */
-const slideByTimeDifference = (gotoNumber) => {
+const slideGalleryByTimeDifference = (gotoNumber) => {
   setTimeout(() => {
-    doms.$gallery.slick('slickGoTo', gotoNumber);
-  }, 8000);
+    $gallery.slick('slickGoTo', gotoNumber);
+  }, autoplaySpeed.gallery);
 }
 
 /**
- * 画面サイズによって、スライド動作を切り替えます。
- * @param {windowWidth} num - スライド動作の切り替えのために用いる。
+ * 画面サイズによって、ギャラリー部のスライド動作を切り替えます。
  */
-export const toggleAfterChangeFunc = (windowWidth) => {
-  if (windowWidth > variables.BREAKPOINT_MEDIUM) {
-    variables.afterChangeFunc = (event, slick, currentSlide) => {
+export const toggleGalleryAfterChange = () => {
+  if (mediaQueries === MEDIA_QUERIES.MEDIUM) {
+    afterChangeFunc = (event, slick, currentSlide) => {
       if (currentSlide === 4) {
-        slideByTimeDifference(0);
+        slideGalleryByTimeDifference(0);
       }
     }
   } else {
     // 767px以下の場合。スライド数が一定ではありません。
-    variables.afterChangeFunc = (event, slick, currentSlide) => {
+    afterChangeFunc = (event, slick, currentSlide) => {
       // 1回目は、3枚スライドさせています。
       if (currentSlide === 3) {
         // 2回目は、2枚しかスライドさせません。
-        slideByTimeDifference(5);
+        slideGalleryByTimeDifference(5);
       }
       if (currentSlide === 5) {
         // 3回目のスライドで元に戻ります。
-        slideByTimeDifference(0);
+        slideGalleryByTimeDifference(0);
       }
     }
   }
-  // 反映させるためにセットし直します。
-  doms.$gallery.on('afterChange', variables.afterChangeFunc);
+  // 新しくイベントをセットし直します。onだと追加されてしまうので、一旦offして解除しています。
+  $gallery.off('afterChange');
+  $gallery.on('afterChange', afterChangeFunc);
 }

@@ -1,42 +1,49 @@
-import * as doms from './doms';
-import * as variables from './variables';
-import { slideByTimeDifference, toggleAfterChangeFunc } from './mySlickModules';
+import { $window, $topSliderList, $gallery, $arrows } from './doms';
+import { BREAKPOINT_MEDIUM } from './constants';
+import { autoplaySpeed } from './slickSettingVaribles';
+import { resetMediaQueries } from './resetMediaQueries';
+import { toggleGalleryAfterChange } from './mySlickModules';
 
 $(function () {
-  // 画面読み込み時の画面幅に応じたafterChangeFuncを設定します。
-  toggleAfterChangeFunc(doms.$window.width());
+  /**
+   * slickスライドを最初のものに戻す。
+   */
+  const returnToFirstSlide = () => {
+    $gallery.slick('slickGoTo', 0);
+  }
 
-  // 画面サイズ変更時にafterChangeFuncを再設定します。
-  doms.$window.resize(function () {
-    const windowWidth = doms.$window.width();
-    toggleAfterChangeFunc(windowWidth);
-    // 動いている最中にリサイズされると、表示が変になる気がするので、最初のスライドに戻しています。
-    doms.$gallery.slick('slickGoTo', 0);
-  });
+  $window.on('load resize', () => {
+    // 順番に注意して下さい。メディアクエリの再設定を最初に行って下さい。
+    // toggleGalleryAfterChange内で再設定後のメディアクエリを使用しています。
+    resetMediaQueries();
+    toggleGalleryAfterChange();
+  })
 
-  // ギャラリーのスライド後の動作を設定しています。
-  doms.$gallery.on('afterChange', variables.afterChangeFunc);
+  $window.on('resize', () => {
+    // スライドアニメーション中にリサイズされると、表示が変になるので、最初のスライドに戻しています。
+    returnToFirstSlide();
+  })
 
   // slickの設定
   // ------------------------------------
-  doms.$topSliderList.slick({
-    appendArrows: doms.$arrows,
+  $topSliderList.slick({
+    appendArrows: $arrows,
     autoplay: true,
-    autoplaySpeed: variables.autoplaySpeed.topSliderList,
+    autoplaySpeed: autoplaySpeed.topSliderList,
     centerMode: true,
     slidesToShow: 1,
     variableWidth: true,
   });
 
-  doms.$gallery.slick({
+  $gallery.slick({
     autoplay: true,
-    autoplaySpeed: variables.autoplaySpeed.gallery,
+    autoplaySpeed: autoplaySpeed.gallery,
     slidesToScroll: 4,
     variableWidth: true,
     waitForAnimate: false,// afterChangeでスライドを動かす際に必要。
     responsive: [
       {
-        breakpoint: variables.BREAKPOINT_MEDIUM + 1,
+        breakpoint: BREAKPOINT_MEDIUM + 1,
         settings: {
           slidesToScroll: 3
         }
