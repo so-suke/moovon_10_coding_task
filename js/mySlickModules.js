@@ -1,14 +1,20 @@
 import * as doms from './doms';
 import * as variables from './variables';
 
-// slickを時間差でスライドさせる。
+/**
+ * slickを時間差でスライドさせる。
+ * @param {gotoNumber} num - 何枚目のスライドにスライドさせるか。
+ */
 const slideByTimeDifference = (gotoNumber) => {
   setTimeout(() => {
     doms.$gallery.slick('slickGoTo', gotoNumber);
   }, 8000);
 }
 
-// 画面サイズによって、スライドの動作を変更します。
+/**
+ * 画面サイズによって、スライド動作を切り替えます。
+ * @param {windowWidth} num - スライド動作の切り替えのために用いる。
+ */
 export const toggleAfterChangeFunc = (windowWidth) => {
   if (windowWidth > variables.BREAKPOINT_MEDIUM) {
     variables.afterChangeFunc = (event, slick, currentSlide) => {
