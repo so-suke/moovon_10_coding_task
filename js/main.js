@@ -2,7 +2,7 @@ import { $window, $topSliderList, $gallery, $arrows } from './doms';
 import { BREAKPOINT_MEDIUM } from './constants';
 import { autoplaySpeed } from './slickSettingVaribles';
 import { resetMediaQueries } from './resetMediaQueries';
-import { toggleGalleryAfterChange } from './mySlickModules';
+import { afterChangeFunc, toggleGalleryAfterChange } from './mySlickModules';
 
 $(function () {
   /**
@@ -50,5 +50,5 @@ $(function () {
       }
     ],
   });
-
+  $gallery.on('afterChange', afterChangeFunc);
 });
